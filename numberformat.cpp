@@ -54,6 +54,10 @@ DECLARE_CONSTANTS_TYPE(UNumberFormatStyle);
     DECLARE_CONSTANTS_TYPE(UNumberGroupingStrategy);
 #endif
 
+#if U_ICU_VERSION_HEX < VERSION_HEX(63, 0, 0)
+using UNumberGroupingStrategy = UGroupingStrategy;
+#endif
+
 /* DecimalFormatSymbols */
 
 class t_decimalformatsymbols : public _wrapper {
